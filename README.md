@@ -1,13 +1,13 @@
-# gg-vue-monaco-editor
+# ap-vue-monaco-editor
 
 > [Monaco Editor](https://github.com/Microsoft/monaco-editor) for Vue.
 
-Demo: https://happy-dubinsky-0b4f38.netlify.app/
+based on [vue-monaco-editor]https://github.com/gurkangul/gg-vue-monaco-editor thanks for the guidance
 
 ## Installation
 
 ```bash
-npm install --save gg-vue-monaco-editor
+npm install --save ap-vue-monaco-editor
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ module.exports = {
 </template>
 
 <script>
-import MonacoEditor from 'gg-vue-monaco-editor'
+import MonacoEditor from 'ap-vue-monaco-editor'
 export default {
   name: "App",
   components: {
@@ -72,7 +72,7 @@ export default {
 ```js
 // editor.js
 import Vue from "vue";
-import MonacoEditor from "gg-vue-monaco-editor";
+import MonacoEditor from "ap-vue-monaco-editor";
 
 Vue.component("MonacoEditor", MonacoEditor);
 ```
