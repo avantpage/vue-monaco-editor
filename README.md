@@ -2,7 +2,7 @@
 
 > [Monaco Editor](https://github.com/Microsoft/monaco-editor) for Vue.
 
-based on [vue-monaco-editor]https://github.com/gurkangul/gg-vue-monaco-editor thanks for the guidance
+based on [vue-monaco-editor](https://github.com/gurkangul/gg-vue-monaco-editor) thanks for the guidance
 
 ## Installation
 
