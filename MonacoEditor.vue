@@ -1,5 +1,5 @@
 <template>
-  <div ref="code-editor" :class="customClass" :style="customStyle" />
+  <div ref="editor" :class="customClass" :style="customStyle" />
 </template>
 
 <script>
@@ -10,20 +10,21 @@ export default {
   props: {
     customStyle: { type: String, default: "" },
     customClass: { type: String, default: "m-editor" },
+    value: { type: String, default: '{}' },
     options: {
       type: Object,
       default: () => {
         return {
-          value: `
-function test() {
-  console.log("test")
-}`,
-          language: "javascript",
-          fontSize: "13px",
+          language: 'javascript',
+          fontSize: '16px',
           automaticLayout: true,
-          theme: "vs-dark",
+          theme: 'vs-dark',
           roundedSelection: false,
           scrollBeyondLastLine: false,
+          autoIndent: true,
+          formatOnPaste: true,
+          formatOnType: true,
+          value: '{}',
         };
       },
     },
@@ -35,16 +36,16 @@ function test() {
   },
   methods: {
     _onChange() {
-      this.editor.getModel().onDidChangeContent((event) => {
-        this.$emit("onChange", { ...event, value: this.editor.getValue() });
+      this.editor.getModel().onDidChangeContent(() => {
+        this.$emit("value", { this.editor.getValue() });
       });
     },
   },
   mounted() {
-    this.editor = monaco.editor.create(this.$refs["code-editor"], this.options);
+    this.editor = monaco.editor.create(this.$refs["editor"], this.options);
+    this.editor.setValue(this.value);
+    this.editor.getAction('editor.action.formatDocument').run();
     this._onChange();
-    // this.$refs["code-editor"].style.height =
-    //   this.editor.getModel().getLineCount() * 20 + "px";
   },
   beforeDestroy() {
     this.editor && this.editor.dispose();
@@ -53,8 +54,5 @@ function test() {
 </script>
 
 <style scoped>
-.m-editor {
-  height: 300px;
-}
 </style>
 
