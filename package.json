@@ -7,16 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "monaco-editor": "^0.27.0",
-    "monaco-editor-webpack-plugin": "^4.1.2"
+    "monaco-editor": "^0.32.0",
+    "monaco-editor-webpack-plugin": "^7.0.1"
   },
   "devDependencies": {
     "vue": "^2.6.11",
-    "monaco-editor-webpack-plugin": "^4.1.2"
+    "monaco-editor-webpack-plugin": "^7.0.1"
   },
   "keywords": [
     "Vue",
-    "gg",
+    "ap",
     "vue-monaco-editor",
     "monaco-editor",
     "monaco",
