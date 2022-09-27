@@ -1,8 +1,8 @@
 {
-  "name": "gg-vue-monaco-editor",
+  "name": "ap-vue-monaco-editor",
   "version": "1.0.1",
-  "homepage": "https://github.com/gurkangul/gg-vue-monaco-editor",
-  "repository": "https://github.com/gurkangul/gg-vue-monaco-editor",
+  "homepage": "https://github.com/avantpage/ap-vue-monaco-editor",
+  "repository": "https://github.com/avantpage/ap-vue-monaco-editor",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,6 @@
     "monaco-editor-vue",
     "vscode editor"
   ],
-  "author": "gurkangul | Gürkan Gül gurkangul5@gmail.com",
+  "author": "avantpage",
   "license": "MIT"
 }
